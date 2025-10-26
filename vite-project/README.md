@@ -34,6 +34,8 @@ A modern, responsive developer dashboard built with React, Vite, and Tailwind CS
 ### Dark Mode
 ![Dark Mode](./src/assets/screenshot-dark.png)
 
+## Deployment Link
+![ dev-dashboard-3us9xz2u9-ualine055-5515s-projects.vercel.app ]
 
 ## 🚀 Features
 
@@ -62,6 +64,37 @@ A modern, responsive developer dashboard built with React, Vite, and Tailwind CS
 
 
 
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm or yarn
+- OpenWeatherMap API key (free)
+
+### Installation
+
+1. **Clone the repository**
+   \`\`\`bash
+   git clone https://github.com/Ualine055/dev-dashboard.git
+   cd vite-project
+   \`\`\`
+
+2. **Install dependencies**
+   \`\`\`bash
+   npm install
+   \`\`\`
+
+5. **Run the development server**
+   \`\`\`bash
+   npm run dev
+   \`\`\`
+
+6. **Open your browser**
+   
+   Navigate to `http://localhost:5173`
+
+
 ## 📁 Folder Structure
 
 ---
@@ -85,57 +118,3 @@ developer-dashboard/
 ├── vite.config.js
 └── README.md
 ---
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js (v14 or higher)
-- npm or yarn
-- OpenWeatherMap API key (free)
-
-### Installation
-
-1. **Clone the repository**
-   \`\`\`bash
-   git clone https://github.com/Ualine055/dev-dashboard.git
-   cd vite-project
-   \`\`\`
-
-2. **Install dependencies**
-   \`\`\`bash
-   npm install
-   \`\`\`
-
-3. **Configure API Keys**
-   
-   Open `src/services/weatherService.js` and replace `YOUR_API_KEY_HERE` with your OpenWeatherMap API key:
-   \`\`\`javascript
-   const WEATHER_API_KEY = 'your_actual_api_key_here'
-   \`\`\`
-
-4. **Update Configuration**
-   
-   Open `src/App.jsx` and update the following:
-   - Replace `'octocat'` with your GitHub username
-   - Replace `'London'` with your city name
-
-5. **Run the development server**
-   \`\`\`bash
-   npm run dev
-   \`\`\`
-
-6. **Open your browser**
-   
-   Navigate to `http://localhost:5173`
-
-### Build for Production
-
-\`\`\`bash
-npm run build
-\`\`\`
-
-The built files will be in the `dist` directory.
-
-### Preview Production Build
-
