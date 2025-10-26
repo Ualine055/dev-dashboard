@@ -97,8 +97,6 @@ A modern, responsive developer dashboard built with React, Vite, and Tailwind CS
 
 ## 📁 Folder Structure
 
----
-
 developer-dashboard/
 ├── public/
 ├── src/
