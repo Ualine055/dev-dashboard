@@ -1,16 +1,141 @@
-# React + Vite
+# Developer Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive developer dashboard built with React, Vite, and Tailwind CSS. Track your GitHub activity and local weather in real-time with a beautiful light/dark mode interface.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📋 APIs Used
 
-## React Compiler
+1. **GitHub API**
+   - Endpoint: `https://api.github.com/users/Ualine055`
+   - No API key required
+   - Rate limit: 60 requests per hour (unauthenticated)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2. **OpenWeatherMap API**
+   - Endpoint: `https://api.open-meteo.com/v1/forecast?latitude=-1.9536&longitude=30.0606&current=temperature_2m,relative_humidity_2m,wind_speed_10m,weather_code&temperature_unit=celsius&wind_speed_unit=kmh&timezone=Africa%2FKigali`
+   - Requires free API key from [Open-meteo.com]
+   - Free tier: 1,000 calls per day
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React 18** - UI library
+- **Vite** - Build tool and development server
+- **Tailwind CSS** - Utility-first CSS framework
+- **Axios** - HTTP client for API requests
+- **Context API** - State management for theme
+- **OpenWeatherMap API** - Weather data
+- **GitHub API** - Profile information
+
+
+## 📸 Screenshots
+
+### Light Mode
+![Light Mode](./src/assets/screenshot-light.PNG)
+
+### Dark Mode
+![Dark Mode](./src/assets/screenshot-dark.png)
+
+
+## 🚀 Features
+
+- **GitHub Profile Card**: Displays my GitHub profile information including:
+  - Profile avatar
+  - Number of repositories
+  - Followers and following count
+  - Location and website
+  - Bio information
+
+- **Weather Card**: Shows current weather conditions including:
+  - Current temperature
+  - Weather condition with emoji icons
+  - Wind speed
+  - Humidity levels
+  - Min/Max temperatures
+  - Real-time clock that updates every second
+
+- **Light/Dark Mode Toggle**: Seamless theme switching with persistent preferences saved to localStorage
+
+- **Responsive Design**: Fully responsive layout that works on mobile, tablet, and desktop devices
+
+- **Error Handling**: Graceful error messages for API failures and network issues
+
+- **Loading States**: Beautiful loading spinners while fetching data
+
+
+
+## 📁 Folder Structure
+
+---
+
+developer-dashboard/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── GitHubCard.jsx        # GitHub profile card
+│   │   ├── Navbar.jsx            # Navigation bar
+│   │   └── WeatherCard.jsx       # Weather information card
+│   ├── hooks/
+│   │   └── useTheme.js       # Theme state management
+│   ├── App.jsx                   # Main application component
+│   ├── index.css                 # Global styles and Tailwind
+│   └── main.jsx                  # Application entry point
+├── index.html
+├── package.json
+├── postcss.config.js
+├── tailwind.config.js
+├── vite.config.js
+└── README.md
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm or yarn
+- OpenWeatherMap API key (free)
+
+### Installation
+
+1. **Clone the repository**
+   \`\`\`bash
+   git clone https://github.com/Ualine055/dev-dashboard.git
+   cd vite-project
+   \`\`\`
+
+2. **Install dependencies**
+   \`\`\`bash
+   npm install
+   \`\`\`
+
+3. **Configure API Keys**
+   
+   Open `src/services/weatherService.js` and replace `YOUR_API_KEY_HERE` with your OpenWeatherMap API key:
+   \`\`\`javascript
+   const WEATHER_API_KEY = 'your_actual_api_key_here'
+   \`\`\`
+
+4. **Update Configuration**
+   
+   Open `src/App.jsx` and update the following:
+   - Replace `'octocat'` with your GitHub username
+   - Replace `'London'` with your city name
+
+5. **Run the development server**
+   \`\`\`bash
+   npm run dev
+   \`\`\`
+
+6. **Open your browser**
+   
+   Navigate to `http://localhost:5173`
+
+### Build for Production
+
+\`\`\`bash
+npm run build
+\`\`\`
+
+The built files will be in the `dist` directory.
+
+### Preview Production Build
+
