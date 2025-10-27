@@ -29,10 +29,10 @@ A modern, responsive developer dashboard built with React, Vite, and Tailwind CS
 ## 📸 Screenshots
 
 ### Light Mode
-![Light Mode](./src/assets/screenshot-light.PNG)
+![Light Mode](./vite-project/src/assets/screenshot-light.PNG)
 
 ### Dark Mode
-![Dark Mode](./src/assets/screenshot-dark.png)
+![Dark Mode](./vite-project/src/assets/screenshot-dark.PNG)
 
 ## Deployment Link
 ![ dev-dashboard-3us9xz2u9-ualine055-5515s-projects.vercel.app ]
