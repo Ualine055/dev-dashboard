@@ -74,11 +74,11 @@ function App() {
           <WeatherCard isDarkMode={isDarkMode} />
         </div>
 
-        <div className={`mt-8 p-4 rounded-lg ${isDarkMode ? 'bg-gray-800 text-gray-300' : 'bg-white text-gray-700'} shadow-md`}>
+        {/* <div className={`mt-8 p-4 rounded-lg ${isDarkMode ? 'bg-gray-800 text-gray-300' : 'bg-white text-gray-700'} shadow-md`}>
           <p className="text-sm text-center">
             Change the GitHub username in the code to view different profiles. Current user: <span className="font-bold text-blue-500">@{githubUsername}</span>
           </p>
-        </div>
+        </div> */}
       </main>
 
       <footer className={`mt-16 py-6 border-t ${isDarkMode ? 'border-gray-800 bg-gray-900 text-gray-400' : 'border-gray-200 bg-white text-gray-600'}`}>
