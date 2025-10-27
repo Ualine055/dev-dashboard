@@ -32,7 +32,7 @@ export default function GitHubCard({ isDarkMode }) {
     return (
       <div className={`rounded-xl shadow-lg p-8 ${isDarkMode ? 'bg-gray-800' : 'bg-white'} transition-colors duration-300`}>
         <div className="flex items-center justify-center h-64">
-          <div className="animate-spin text-blue-500 text-3xl">⏳</div>
+          <div className="animate-spin text-blue-500 text-3xl">loading...</div>
         </div>
       </div>
     );
@@ -48,7 +48,7 @@ export default function GitHubCard({ isDarkMode }) {
     );
   }
 
-  if (!data) return null;
+  if (!data) return null; //this prevents rendering if no data is available
 
   return (
     <div className={`rounded-xl shadow-lg p-6 ${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-900'} transition-colors duration-300 hover:shadow-xl`}>
