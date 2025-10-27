@@ -1,25 +1,3 @@
-// import React from "react";
-
-// export default function Navbar({ theme, setTheme }) {
-//   const toggleTheme = () => setTheme(theme === "dark" ? "light" : "dark");
-
-//   return (
-//     <nav className="flex justify-between items-center px-6 py-3 bg-white dark:bg-gray-800 shadow-md">
-//       <div className="flex items-center space-x-3">
-//         <div className="bg-blue-600 text-white font-bold rounded-lg px-3 py-1">D</div>
-//         <h1 className="font-semibold text-lg dark:text-white">Developer Dashboard</h1>
-//       </div>
-//       <button
-//         onClick={toggleTheme}
-//         className="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:opacity-80"
-//       >
-//         {theme === "dark" ? "🌙" : "☀️"}
-//       </button>
-//     </nav>
-//   );
-// }
-
-
 import React from 'react';
 export default function Navbar({ isDarkMode, toggleTheme }) {
   return (
