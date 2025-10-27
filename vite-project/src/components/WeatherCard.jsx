@@ -7,12 +7,14 @@ export default function WeatherCard({ isDarkMode }) {
   const [error, setError] = useState(null);
   const [currentTime, setCurrentTime] = useState(new Date());
 
+  // update time every second
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentTime(new Date());
     }, 1000);
     return () => clearInterval(timer);
   }, []);
+
 
   useEffect(() => {
     const fetchWeatherData = async () => {
@@ -97,7 +99,7 @@ export default function WeatherCard({ isDarkMode }) {
     return (
       <div className={`rounded-xl shadow-lg p-8 ${isDarkMode ? 'bg-gray-800' : 'bg-white'} transition-colors duration-300`}>
         <div className="flex items-center justify-center h-64">
-          <div className="animate-spin text-blue-500 text-3xl">⏳</div>
+          <div className="animate-spin text-blue-500 text-3xl">loading...</div>
         </div>
       </div>
     );
@@ -113,7 +115,7 @@ export default function WeatherCard({ isDarkMode }) {
     );
   }
 
-  if (!data) return null;
+  if (!data) return null; //Avoids rendering empty UI if data doesn’t exist.
 
   return (
     <div className={`rounded-xl shadow-lg p-6 ${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-gray-900'} transition-colors duration-300 hover:shadow-xl`}>
