@@ -56,6 +56,7 @@ import { useTheme } from './hooks/useTheme';
 function App() {
   const { isDarkMode, toggleTheme } = useTheme();
   const [githubUsername] = useState('Ualine055');
+  const [City] = useState('Kigali');
 
   return (
     <div className={`min-h-screen transition-colors duration-300 ${isDarkMode ? 'bg-gray-900' : 'bg-linear-to-br from-blue-50 via-gray-50 to-blue-100'}`}>
